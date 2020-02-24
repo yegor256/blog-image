@@ -30,14 +30,9 @@ RUN sudo apt-get -y install s3cmd
 RUN sudo apt-get -y install fontforge liblapack-dev
 RUN sudo apt-get -y install plantuml
 
-ADD https://raw.githubusercontent.com/yegor256/blog/master/install-cmake.sh /tmp/
-RUN /bin/bash /tmp/install-cmake.sh
-
-ADD https://raw.githubusercontent.com/yegor256/blog/master/install-woff.sh /tmp/
-RUN /bin/bash /tmp/install-woff.sh
-
-ADD https://raw.githubusercontent.com/yegor256/blog/master/install-tidy.sh /tmp/
-RUN /bin/bash /tmp/install-tidy.sh
+RUN install-cmake.sh
+RUN install-woff.sh
+RUN install-tidy.sh
 
 RUN sudo apt-get -y update --fix-missing
 RUN sudo apt-get install -y libxml2-utils
