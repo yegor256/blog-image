@@ -49,8 +49,8 @@ RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 && \
   make && \
   make install
 
-RUN wget http://img.teamed.io/woff-code-latest.zip && \
-  unzip woff-code-latest.zip -d _sfnt2woff && \
+COPY woff.zip /tmp/woff.zip
+RUN unzip /tmp/woff.zip -d _sfnt2woff && \
   cd _sfnt2woff && \
   make && \
   cp sfnt2woff /usr/local/bin/
