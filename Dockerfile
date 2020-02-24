@@ -29,7 +29,9 @@ RUN sudo apt-get -y update --fix-missing
 RUN sudo apt-get -y install gnuplot
 RUN sudo apt-get -y install s3cmd
 RUN sudo apt-get -y install fontforge liblapack-dev
+
 RUN sudo apt-get -y install plantuml
+COPY plantuml.jar /usr/share/plantuml/plantuml.jar
 
 RUN wget --no-check-certificate --quiet https://cmake.org/files/v3.5/cmake-3.5.1.tar.gz && \
   tar xf cmake-3.5.1.tar.gz && \
