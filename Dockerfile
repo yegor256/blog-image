@@ -30,13 +30,13 @@ RUN sudo apt-get -y install s3cmd
 RUN sudo apt-get -y install fontforge liblapack-dev
 RUN sudo apt-get -y install plantuml
 
-ADD https://raw.githubusercontent.com/yegor256/blog/master/_docker/install-cmake.sh /tmp/
+ADD https://raw.githubusercontent.com/yegor256/blog/master/install-cmake.sh /tmp/
 RUN /bin/bash /tmp/install-cmake.sh
 
-ADD https://raw.githubusercontent.com/yegor256/blog/master/_docker/install-woff.sh /tmp/
+ADD https://raw.githubusercontent.com/yegor256/blog/master/install-woff.sh /tmp/
 RUN /bin/bash /tmp/install-woff.sh
 
-ADD https://raw.githubusercontent.com/yegor256/blog/master/_docker/install-tidy.sh /tmp/
+ADD https://raw.githubusercontent.com/yegor256/blog/master/install-tidy.sh /tmp/
 RUN /bin/bash /tmp/install-tidy.sh
 
 RUN sudo apt-get -y update --fix-missing
