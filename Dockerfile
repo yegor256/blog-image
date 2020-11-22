@@ -49,6 +49,7 @@ RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 && \
   make && \
   make install
 
+RUN sudo apt-get install -y woff2
 COPY woff.zip /tmp/woff.zip
 RUN unzip /tmp/woff.zip -d _sfnt2woff && \
   cd _sfnt2woff && \
